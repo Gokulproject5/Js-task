@@ -46,13 +46,13 @@
     // Product data
     const products = Array.from({ length: 50 }, (_, i) => `Product ${i + 1}`);
 
-    const fragment = document.createDocumentFragment();
-
-    // Render list
+    
+    // Render list for get data flexibile
     function renderList(data) {
       ulEl.innerHTML = "";
    
-      
+      const fragment = document.createDocumentFragment();
+
 
       if (!data.length) {
         const li = document.createElement("li");
@@ -72,6 +72,8 @@
 
       ulEl.appendChild(fragment);
     }
+
+
 
     // Search logic
     function handleSearch(value) {
